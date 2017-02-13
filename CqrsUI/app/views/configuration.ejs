@@ -1,0 +1,448 @@
+<% include header %>
+<div class="content">
+    <div class="wrap">
+        <div class="content-grid">
+            <p><img src="images/top.png" title=""></p>
+        </div>
+        <div class="row">
+            <div class="col-md-12 jumbotron">
+                <p>* Se han probado 3 distribuciones para montar la arquitectura CQRS + NGINX + MONGODB + NODEJS.</p>
+                <p>De las tres, la que cumple las espectativas tanto a nivel de repositorios como a nivel de estabilidad es Rasbian JESSIE LITE. Fedora 25 aunque tiene soporte con los repositorios que necesitamos, se me quedaba frita siempre de madrugada (algun demonio ¿?) y Centos, aunque es igual de estable que Raspbian, los repositorios o paquetes estan muy lejos de llegar a la disponibilidad de Raspbian o Fedora 25.</p>
+                <p>Esperamos mejoras, evoluciones y las versiones Aarch64 de las tres distribuciones.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordionRaspbian" data-toggle="collapse" href="#Raspbian">Raspbian</a></h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="Raspbian">
+                        <div class="panel-body">
+                            <div aria-multiselectable="true" class="panel-group" id="accordionRaspbian" role="tablist">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="HardwareRaspbian" aria-expanded="true" data-parent="#accordionRaspbian" data-toggle="collapse" href="#HardwareRaspbian" role="button">Hardware</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse" id="HardwareRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b" target="_blank">Raspberry Pi 3</a><br>
+                                            * <a href="http://livebox.orange.es/b/inicio.html" target="_blank">LiveBox 2.0</a><br>
+                                            * 2017-01-11-raspbian-jessie.zip --&gt; Descomprimir. Restarurar en SD (Pi Baker/WinFlashTool/Win32diskimager).<br>
+                                            * Ejecutar un raspi-config para configurar
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NoIpRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#NoIpRaspbian" role="button">NoIp</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse" id="NoIpRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="http://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/" target="_blank">No Ip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingTwo" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="SSHRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#SSHRaspbian" role="button">SSH Aceso Remoto</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="SSHRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>* Ejecutar un raspi-config para configurar</p>
+                                            <p><a href="https://linuxconfig.org/how-to-install-start-and-connect-to-ssh-server-on-fedora-linux" target="_blank">Configuración SSH</a></p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="FTPRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#FTPRaspbian" role="button">Servicio FTP</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="FTPRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Configuración e instalación del servicio <a href="https://www.raspberrypi.org/documentation/remote-access/ftp.md" target="_blank">ftp</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NodeJSRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#NodeJSRaspbian" role="button">NODE.JS</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NodeJSRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Instalamos Node</p><code></code>
+                                            <p><code><a href="http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi/#install-node">Aquí</a></code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NGINXRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#NGINXRaspbian" role="button">NGINX</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NGINXRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>apt-get install NGINX</p>
+                                            <p>Posible solución al <a href="http://serverfault.com/questions/629318/nginx-proxy-pass-to-nodejs-app-returning-502-error">redireccionamiento</a></p>
+                                            <p>Editamos nano /etc/nginx/sites-available/config</p><code></code>
+                                            <p><code>server {</code></p>
+                                            <p><code>listen 80;</code></p>
+                                            <p><code>server_name <b>no-ip domain</b>;</code></p>
+                                            <p><code>root /usr/share/nginx/html/<b>rootAplicación</b>;</code></p>
+                                            <p><code>location / {</code></p>
+                                            <p><code>proxy_pass http://localhost:3000/;</code></p>
+                                            <p><code>proxy_http_version 1.1;</code></p>
+                                            <p><code>proxy_set_header Upgrade $http_upgrade;</code></p>
+                                            <p><code>proxy_set_header Connection 'upgrade';</code></p>
+                                            <p><code>proxy_set_header Host $host;</code></p>
+                                            <p><code>proxy_cache_bypass $http_upgrade;</code></p>
+                                            <p><code>}</code></p>
+                                            <p><code>}</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="PM2Raspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#PM2Raspbian" role="button">Site como Servicio</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="PM2Raspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>PM2 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7#install-pm2" target="_blank">Instalar y configurar PM2</a></p>
+                                            <p>* <a href="https://keymetrics.io/">keymetrics.io</a> recomendable para las metricas y estado del servidor y del site</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="JAVA8Raspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#JAVA8Raspbian" role="button">JAVA8_111</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="JAVA8Raspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar JAVA8 (apt-get install)</p><code></code>
+                                            <p><code>cd /opt/</code></p><code></code>
+                                            <p><code>wget download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>tar -xvzf jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>rm jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>mv jdk1.8.0_111 /opt/java8_111</code></p>
+                                            <p><code>alternatives --install /usr/bin/java java /opt/java8_111/bin/java 1</code></p>
+                                            <p><code>alternatives --config java</code></p>
+                                            <p>* <a href="https://blog.adafruit.com/2014/03/28/how-to-install-oracle-jdk-8-on-raspberry-pi-piday-raspberrypi-raspberry_pi/" target="_blank">Documentación</a> para varias versiones de java</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="MongoDBRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#MongoDBRaspbian" role="button">MongoDB</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="MongoDBRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar MongoDB</p><code></code>
+                                            <p><code><a href="http://yannickloriot.com/2016/04/install-mongodb-and-node-js-on-a-raspberry-pi/">Aquí</a></code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="RabbitMQRaspbian" aria-expanded="false" class="collapsed" data-parent="#accordionRaspbian" data-toggle="collapse" href="#RabbitMQRaspbian" role="button">RabbitMQ</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="RabbitMQRaspbian" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar RabbitMQ</p><code></code>
+                                            <p><code><a href="https://abarbanell.wordpress.com/2014/08/26/rabbitmq-on-raspberry-pi/">Aquí</a></code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordionFedora" data-toggle="collapse" href="#Fedora25">Fedora 25</a></h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="Fedora25">
+                        <div class="panel-body">
+                            <div aria-multiselectable="true" class="panel-group" id="accordionFedora" role="tablist">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="HardwareFedora" aria-expanded="true" data-parent="#accordionFedora" data-toggle="collapse" href="#HardwareFedora" role="button">Hardware</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse in" id="HardwareFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b" target="_blank">Raspberry Pi 3</a><br>
+                                            * <a href="http://livebox.orange.es/b/inicio.html" target="_blank">LiveBox 2.0</a><br>
+                                            * Fedora-Server-armhfp-25-1.3-sda.raw.xz --&gt; Descomprimir y renombrar a iso. Restarurar en SD (Pi Baker/WinFlashTool/Win32diskimager).<br>
+                                            * Agrandar <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=51&amp;t=45265">partición</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NoIpFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#NoIpFedora" role="button">NoIp</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse" id="NoIpFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client/" target="_blank">No Ip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingTwo" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="SSHFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#SSHFedora" role="button">SSH Aceso Remoto</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="SSHFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p><a href="https://linuxconfig.org/how-to-install-start-and-connect-to-ssh-server-on-fedora-linux" target="_blank">Configuración SSH</a></p>
+                                            <p>IPTables no configurado y firewalld <a href="https://www.liquidweb.com/kb/how-to-stop-and-disable-firewalld-on-centos-7/" target="_blank">desactivado</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="FTPFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#FTPFedora" role="button">Servicio FTP</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="FTPFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Configuración e instalación del servicio <a href="http://www.krizna.com/centos/setup-ftp-server-centos-7-vsftp/" target="_blank">ftp</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NodeJSFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#NodeJSFedora" role="button">NODE.JS</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NodeJSFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Instalamos Node</p><code></code>
+                                            <p><code>yum install nodejs o dnf install nodejs</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NGINXFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#NGINXFedora" role="button">NGINX</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NGINXFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Instrucciones <a href="https://fernetjs.com/2013/03/nodejs-a-la-nube-con-nginx-en-un-vps/" target="_blank">NGINX</a></p>
+                                            <p>Posible solución al <a href="http://serverfault.com/questions/629318/nginx-proxy-pass-to-nodejs-app-returning-502-error">redireccionamiento</a></p><code></code>
+                                            <p><code>server {</code></p>
+                                            <p><code>listen 80;</code></p>
+                                            <p><code>server_name <b>no-ip domain</b>;</code></p>
+                                            <p><code>root /usr/share/nginx/html/<b>rootAplicación</b>;</code></p>
+                                            <p><code>location / {</code></p>
+                                            <p><code>proxy_pass http://localhost:3000/;</code></p>
+                                            <p><code>proxy_http_version 1.1;</code></p>
+                                            <p><code>proxy_set_header Upgrade $http_upgrade;</code></p>
+                                            <p><code>proxy_set_header Connection 'upgrade';</code></p>
+                                            <p><code>proxy_set_header Host $host;</code></p>
+                                            <p><code>proxy_cache_bypass $http_upgrade;</code></p>
+                                            <p><code>}</code></p>
+                                            <p><code>}</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="PM2Fedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#PM2Fedora" role="button">Site como Servicio</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="PM2Fedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>PM2 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7#install-pm2" target="_blank">Instalar y configurar PM2</a></p>
+                                            <p>* <a href="https://keymetrics.io/">keymetrics.io</a> recomendable para las metricas y estado del servidor y del site</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="JAVA8Fedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#JAVA8Fedora" role="button">JAVA8_111</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="JAVA8Fedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar JAVA8</p><code></code>
+                                            <p><code>cd /opt/</code></p><code></code>
+                                            <p><code>wget download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>tar -xvzf jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>rm jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>mv jdk1.8.0_111 /opt/java8_111</code></p>
+                                            <p><code>alternatives --install /usr/bin/java java /opt/java8_111/bin/java 1</code></p>
+                                            <p><code>alternatives --config java</code></p>
+                                            <p>* <a href="http://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/" target="_blank">Documentación</a> para varias versiones de java</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="MongoDBFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#MongoDBFedora" role="button">MongoDB</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="MongoDBFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar MongoDB</p><code></code>
+                                            <p><code>yum install mongodb mongodb-server * dnf install mongodb mongodb-server</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="RabbitMQFedora" aria-expanded="false" class="collapsed" data-parent="#accordionFedora" data-toggle="collapse" href="#RabbitMQFedora" role="button">RabbitMQ</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="RabbitMQFedora" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar RabbitMQ</p><code></code>
+                                            <p><code>yum install rabbitmq-server * dnf install rabbitmq-server</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#Centos7">Centos 7</a></h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="Centos7">
+                        <div class="panel-body">
+                            <div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="Hardware" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#Hardware" role="button">Hardware</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse in" id="Hardware" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b" target="_blank">Raspberry Pi 3</a><br>
+                                            * <a href="http://livebox.orange.es/b/inicio.html" target="_blank">LiveBox 2.0</a><br>
+                                            * Fedora-Server-armhfp-25-1.3-sda.raw.xz --&gt; Descomprimir y renombrar a iso. Restarurar en SD (Pi Baker/WinFlashTool/Win32diskimager).<br>
+                                            * Agrandar <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=51&amp;t=45265">partición</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingOne" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NoIp" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#NoIp" role="button">NoIp</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingOne" class="panel-collapse collapse" id="NoIp" role="tabpanel">
+                                        <div class="panel-body">
+                                            * <a href="http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client/" target="_blank">No Ip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingTwo" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="SSH" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#SSH" role="button">SSH Aceso Remoto</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="SSH" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p><a href="https://linuxconfig.org/how-to-install-start-and-connect-to-ssh-server-on-fedora-linux" target="_blank">Configuración SSH</a></p>
+                                            <p>IPTables no configurado y firewalld <a href="https://www.liquidweb.com/kb/how-to-stop-and-disable-firewalld-on-centos-7/" target="_blank">desactivado</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="FTP" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#FTP" role="button">Servicio FTP</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="FTP" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Configuración e instalación del servicio <a href="http://www.krizna.com/centos/setup-ftp-server-centos-7-vsftp/" target="_blank">ftp</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NodeJS" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#NodeJS" role="button">NODE.JS</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NodeJS" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Instalamos Node</p><code></code>
+                                            <p><code>yum install nodejs o dnf install nodejs</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="NGINX" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#NGINX" role="button">NGINX</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="NGINX" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Instrucciones <a href="https://fernetjs.com/2013/03/nodejs-a-la-nube-con-nginx-en-un-vps/" target="_blank">NGINX</a></p>
+                                            <p>Posible solución al <a href="http://serverfault.com/questions/629318/nginx-proxy-pass-to-nodejs-app-returning-502-error">redireccionamiento</a></p><code></code>
+                                            <p><code>server {</code></p>
+                                            <p><code>listen 80;</code></p>
+                                            <p><code>server_name <b>no-ip domain</b>;</code></p>
+                                            <p><code>root /usr/share/nginx/html/<b>rootAplicación</b>;</code></p>
+                                            <p><code>location / {</code></p>
+                                            <p><code>proxy_pass http://localhost:3000/;</code></p>
+                                            <p><code>proxy_http_version 1.1;</code></p>
+                                            <p><code>proxy_set_header Upgrade $http_upgrade;</code></p>
+                                            <p><code>proxy_set_header Connection 'upgrade';</code></p>
+                                            <p><code>proxy_set_header Host $host;</code></p>
+                                            <p><code>proxy_cache_bypass $http_upgrade;</code></p>
+                                            <p><code>}</code></p>
+                                            <p><code>}</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="PM2" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#PM2" role="button">Site como Servicio</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="PM2" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>PM2 <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7#install-pm2" target="_blank">Instalar y configurar PM2</a></p>
+                                            <p>* <a href="https://keymetrics.io/">keymetrics.io</a> recomendable para las metricas y estado del servidor y del site</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="JAVA8" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#JAVA8" role="button">JAVA8_111</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="JAVA8" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar JAVA8</p><code></code>
+                                            <p><code>cd /opt/</code></p><code></code>
+                                            <p><code>wget download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>tar -xvzf jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>rm jdk-8u111-linux-arm32-vfp-hflt.tar.gz</code></p>
+                                            <p><code>mv jdk1.8.0_111 /opt/java8_111</code></p>
+                                            <p><code>alternatives --install /usr/bin/java java /opt/java8_111/bin/java 1</code></p>
+                                            <p><code>alternatives --config java</code></p>
+                                            <p>* <a href="http://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/" target="_blank">Documentación</a> para varias versiones de java</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="MongoDB" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#MongoDB" role="button">MongoDB</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="MongoDB" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar MongoDB</p><code></code>
+                                            <p><code>yum install mongodb mongodb-server * dnf install mongodb mongodb-server</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="headingThree" role="tab">
+                                        <h4 class="panel-title"><a aria-controls="RabbitMQ" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#RabbitMQ" role="button">RabbitMQ</a></h4>
+                                    </div>
+                                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="RabbitMQ" role="tabpanel">
+                                        <div class="panel-body">
+                                            <p>Para instalar RabbitMQ</p><code></code>
+                                            <p><code>yum install rabbitmq-server * dnf install rabbitmq-server</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include footer %>
+
+
+<% include footer %>
