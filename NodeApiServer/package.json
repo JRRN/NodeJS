@@ -6,8 +6,10 @@
     "license": "GPL-3.0",
     "private": true,
     "dependencies": {
-        "express": "~3.x",
-        "mongoose": "^4.11.3",
+        "body-parser": "^1.17.2",
+        "cors": "^2.8.4",
+        "express": "^3.21.2",
+        "mongodb": "^2.2.30",
         "nodemon": "^1.11.0"
     },
     "scripts": {
